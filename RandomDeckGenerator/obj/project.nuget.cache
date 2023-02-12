@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "DjIvAE7Shc4Vazn3qfhYIM2qSyiflkjTTizR/KbF9nZBe313+tdU3sIlgqEonBQ3Vx5u1K4fsef4QVMVnHg0bQ==",
+  "dgSpecHash": "hWrvvyb4KmCP3ONytTXBPN4V4VwNlTd82aXsQ/337t7MGbIUNXX/GTYJiuxI2M53i2Ol3tRXEyQVLZZTIzW9uA==",
   "success": true,
   "projectFilePath": "C:\\Projects\\RandomDeckGenerator\\RandomDeckGenerator\\RandomDeckGenerator.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\murph\\.nuget\\packages\\newtonsoft.json\\13.0.2\\newtonsoft.json.13.0.2.nupkg.sha512"
+  ],
   "logs": []
 }

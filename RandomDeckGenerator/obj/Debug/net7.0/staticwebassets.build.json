@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "yCrWCZAXDLfSABSljoId26MXykLzhIr3C8A07B8i+n4=",
+  "Hash": "GIVHTVoy0tgeus1QKgJBD248Ls9pp6r1TCI/e/d+j84=",
   "Source": "RandomDeckGenerator",
   "BasePath": "_content/RandomDeckGenerator",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Projects\\RandomDeckGenerator\\RandomDeckGenerator\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\RandomDeckGenerator.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Projects\\RandomDeckGenerator\\RandomDeckGenerator\\wwwroot\\css\\DeckGeneratorSylesheet.css",
+      "SourceId": "RandomDeckGenerator",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Projects\\RandomDeckGenerator\\RandomDeckGenerator\\wwwroot\\",
+      "BasePath": "_content/RandomDeckGenerator",
+      "RelativePath": "css/DeckGeneratorSylesheet.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\DeckGeneratorSylesheet.css"
     },
     {
       "Identity": "C:\\Projects\\RandomDeckGenerator\\RandomDeckGenerator\\wwwroot\\css\\site.css",

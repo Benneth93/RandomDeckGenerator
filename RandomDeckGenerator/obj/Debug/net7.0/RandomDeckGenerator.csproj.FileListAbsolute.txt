@@ -29,3 +29,5 @@ C:\Projects\RandomDeckGenerator\RandomDeckGenerator\obj\Debug\net7.0\refint\Rand
 C:\Projects\RandomDeckGenerator\RandomDeckGenerator\obj\Debug\net7.0\RandomDeckGenerator.pdb
 C:\Projects\RandomDeckGenerator\RandomDeckGenerator\obj\Debug\net7.0\RandomDeckGenerator.genruntimeconfig.cache
 C:\Projects\RandomDeckGenerator\RandomDeckGenerator\obj\Debug\net7.0\ref\RandomDeckGenerator.dll
+C:\Projects\RandomDeckGenerator\RandomDeckGenerator\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Projects\RandomDeckGenerator\RandomDeckGenerator\obj\Debug\net7.0\RandomDeckGenerator.csproj.CopyComplete

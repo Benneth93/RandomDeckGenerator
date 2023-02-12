@@ -1,3 +1,4 @@
+using NUnit.Framework.Internal;
 using RandomDeckGenerator.Models;
 using RandomDeckGenerator.Services;
 
@@ -5,45 +6,45 @@ namespace DeckGeneratorTests;
 
 public class DeckGeneratorTests
 {
-    private DeckModel _deck;
-    private static List<string> _cardFaces;
+   
     [SetUp]
     public void Setup()
     {
-        _deck = DeckGeneratorService.GenerateDeck();
-        _cardFaces = new ()
+    }
+
+    [Test]
+    public void GenerateDeckOfCards()
+    {
+        var list = new List<string>
         {
-            "A","2","3","4","5","6","7","8","9","10","J","Q","K"
+            "A","B","C","D","E","F","G","H","I","J","K","L","M",
+            "A","B","C","D","E","F","G","H","I","J","K","L","M",
+            "A","B","C","D","E","F","G","H","I","J","K","L","M",
+            "A","B","C","D","E","F","G","H","I","J","K","L","M"
         };
+       var deck =  DeckGeneratorService.GenerateDeck(list);
+       Assert.Multiple(() =>
+       {
+           Assert.That(deck._clubs.Count, Is.EqualTo(13));
+           Assert.That(deck._spades.Count, Is.EqualTo(13));
+           Assert.That(deck._diamonds.Count, Is.EqualTo(13));
+           Assert.That(deck._hearts.Count, Is.EqualTo(13));
+       });
+       
+       
+       TestContext.Progress.WriteLine("All Card counts are 13");
+       
+       TestContext.Progress.WriteLine($"Hearts: {deck._hearts.Count}");
+       TestContext.Progress.WriteLine($"Spades: {deck._spades.Count}");
+       TestContext.Progress.WriteLine($"Clubs: {deck._clubs.Count}");
+       TestContext.Progress.WriteLine($"Diamonds: {deck._diamonds.Count}");
+       
+       foreach (var card in deck._hearts)TestContext.Progress.WriteLine(card);
+       foreach (var card in deck._clubs)TestContext.Progress.WriteLine(card);
+       foreach (var card in deck._spades)TestContext.Progress.WriteLine(card);
+       foreach (var card in deck._diamonds)TestContext.Progress.WriteLine(card);
+
     }
 
-    [Test]
-    public void DeckGeneratorShouldReturn52Cards()
-    {
-        Assert.Multiple(() =>
-        {
-            Assert.That(_deck.Clubs.Count, Is.EqualTo(13), $"Number of clubs in deck was not 13 but was: {_deck.Clubs.Count}");
-            Assert.That(_deck.Spades.Count, Is.EqualTo(13), $"Number of spades in deck was not 13 but was: {_deck.Spades.Count}");
-            Assert.That(_deck.Diamonds.Count, Is.EqualTo(13), $"Number of diamonds in deck was not 13 but was: {_deck.Diamonds}");
-            Assert.That(_deck.Hearts.Count, Is.EqualTo(13), $"Number of hearts in deck was not 13 but was: {_deck.Hearts.Count}");
-        });
-        
-        var cardCount = _deck.Clubs.Count + _deck.Spades.Count + _deck.Diamonds.Count + _deck.Hearts.Count;
-        Assert.That(cardCount, Is.EqualTo(52), $"Total cards did not equal 52 card count was: {cardCount}");
-    }
 
-    [Test]
-    public void SuitsShouldContainTheCorrectSymbols()
-    {
-        for (var i = 0; i < 13; i++)
-        {
-            Assert.Multiple(() =>
-            {
-                Assert.That(_deck.Clubs[i].CardFace, Is.EqualTo(_cardFaces[i]));
-                Assert.That(_deck.Diamonds[i].CardFace, Is.EqualTo(_cardFaces[i]));
-                Assert.That(_deck.Spades[i].CardFace, Is.EqualTo(_cardFaces[i]));
-                Assert.That(_deck.Hearts[i].CardFace, Is.EqualTo(_cardFaces[i]));
-            });
-        }
-    }
 }

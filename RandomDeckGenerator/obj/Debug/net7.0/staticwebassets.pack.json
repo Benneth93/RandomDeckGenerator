@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\RandomDeckGenerator.bundle.scp.css"
     },
     {
+      "Id": "C:\\Projects\\RandomDeckGenerator\\RandomDeckGenerator\\wwwroot\\css\\DeckGeneratorSylesheet.css",
+      "PackagePath": "staticwebassets\\css\\DeckGeneratorSylesheet.css"
+    },
+    {
       "Id": "C:\\Projects\\RandomDeckGenerator\\RandomDeckGenerator\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
