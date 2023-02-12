@@ -1,0 +1,32 @@
+@page
+@model RandomDeckGenerator.Pages.DeckGenerator
+
+@{
+    var deck = Model._deck;
+    var faces = new List<string>
+    { "A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K" };
+    
+}
+<link rel="stylesheet" href="~/css/DeckGeneratorSylesheet.css" type="text/css" asp-append-version="true"/>
+
+<div class="DeckGenerator">
+    <table>
+        <th>Card</th>
+        <th>Hearts</th>
+        <th>Clubs</th>
+        <th>Spades</th>
+        <th>Diamonds</th>
+        @{
+            for (var i = 0; i < 13; i++)
+            {
+                <tr>
+                    <td>@faces[i]</td>
+                    <td>@deck._hearts[i]</td>
+                    <td>@deck._clubs[i]</td>
+                    <td>@deck._spades[i]</td>
+                    <td>@deck._diamonds[i]</td>
+                </tr>
+            }
+        }
+    </table>
+</div>
