@@ -1,4 +1,4 @@
-.table{
+table{
     border-radius: 5px;
     font-size: 12px;
     font-weight: normal;
@@ -10,26 +10,44 @@
     background-color: white;
 }
 
-.th, .td{
+td, th {
     text-align: center;
     padding: 8px;
 }
+td {
+     border-right: 1px solid #f8f8f8;
+     font-size: 12px;
+ }
 
-.td{
-    border-right: 1px solid #f8f8f8;
-    font-size: 12px;
-}
-
-.th{
+th {
     color: #ffffff;
     background: #4FC3A1;
 }
 
-.th:nth-child(odd) {
+th:nth-child(odd) {
     color: #ffffff;
     background: #324960;
 }
 
-.tr:nth-child(even) {
-    background: #F8F8F8;
+td
+{
+    background: black;
+    color: black;
 }
+td:nth-child(5n+1) {
+    background: white;
+}
+
+td:hover
+{
+    color:black;
+    background: lightgrey;
+}
+
+
+
+
+
+
+
+
