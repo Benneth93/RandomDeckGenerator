@@ -17,7 +17,6 @@ public class DeckGenerator : PageModel
             if (contextdata == null) return RedirectToPage("/DeckInput");
             
             var dataList = JsonConvert.DeserializeObject<List<string>>(contextdata);
-            var DeckGenerated = HttpContext.Session.GetInt32("DeckGenerated");
             
             _deck = DeckGeneratorService.GenerateDeck(dataList);
             HttpContext.Session.SetString("Deck",JsonConvert.SerializeObject(_deck));
