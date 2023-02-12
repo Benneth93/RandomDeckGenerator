@@ -20,6 +20,10 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGVja0dlbmVyYXRvci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Projects/RandomDeckGenerator/RandomDeckGenerator/Pages/DeckInput.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGVja0lucHV0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Projects/RandomDeckGenerator/RandomDeckGenerator/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
