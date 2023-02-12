@@ -13,6 +13,7 @@ public static class DeckGeneratorService
 
     public static Deck GenerateDeck(List<string> inputs)
     {
+        _deck = new();
         var valuesToUse = inputs;
         var rand = new Random();
         int selection = 0;
