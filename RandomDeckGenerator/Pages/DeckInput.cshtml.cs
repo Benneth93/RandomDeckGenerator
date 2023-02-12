@@ -1,7 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Newtonsoft.Json;
-using RandomDeckGenerator.Services;
 
 namespace RandomDeckGenerator.Pages;
 
@@ -28,7 +27,17 @@ public class DeckInput : PageModel
     public IActionResult OnPost()
     {
         var listOfInput = Request.Form["dataToInput"].ToList();
-        
+
+        listOfInput.RemoveAll(x => string.IsNullOrEmpty(x));
+    
+        var rand = new Random();
+
+        while (listOfInput.Count < 52)
+        {
+            var current = rand.Next(0, listOfInput.Count);
+            listOfInput.Add(listOfInput[current]);
+        }
+
         HttpContext.Session.SetString("currentDataSet", JsonConvert.SerializeObject(listOfInput));
         
         return RedirectToPage("/DeckGenerator");
