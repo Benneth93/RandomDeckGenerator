@@ -31,3 +31,10 @@ C:\Projects\RandomDeckGenerator\RandomDeckGenerator\obj\Debug\net7.0\RandomDeckG
 C:\Projects\RandomDeckGenerator\RandomDeckGenerator\obj\Debug\net7.0\ref\RandomDeckGenerator.dll
 C:\Projects\RandomDeckGenerator\RandomDeckGenerator\bin\Debug\net7.0\Newtonsoft.Json.dll
 C:\Projects\RandomDeckGenerator\RandomDeckGenerator\obj\Debug\net7.0\RandomDeckGenerator.csproj.CopyComplete
+C:\Projects\RandomDeckGenerator\RandomDeckGenerator\bin\Debug\net7.0\Azure.Core.dll
+C:\Projects\RandomDeckGenerator\RandomDeckGenerator\bin\Debug\net7.0\Azure.Storage.Common.dll
+C:\Projects\RandomDeckGenerator\RandomDeckGenerator\bin\Debug\net7.0\Azure.Storage.Files.Shares.dll
+C:\Projects\RandomDeckGenerator\RandomDeckGenerator\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Projects\RandomDeckGenerator\RandomDeckGenerator\bin\Debug\net7.0\System.IO.Hashing.dll
+C:\Projects\RandomDeckGenerator\RandomDeckGenerator\bin\Debug\net7.0\System.Memory.Data.dll
+C:\Projects\RandomDeckGenerator\RandomDeckGenerator\bin\Debug\net7.0\appsettings.Production.json

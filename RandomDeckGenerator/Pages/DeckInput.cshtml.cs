@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Newtonsoft.Json;
+using System.IO;
+using RandomDeckGenerator.Services;
 
 namespace RandomDeckGenerator.Pages;
 
@@ -37,8 +39,10 @@ public class DeckInput : PageModel
             var current = rand.Next(0, listOfInput.Count);
             listOfInput.Add(listOfInput[current]);
         }
-
-        HttpContext.Session.SetString("currentDataSet", JsonConvert.SerializeObject(listOfInput));
+        
+        var json = JsonConvert.SerializeObject(listOfInput);
+        AzureFileShareService.UploadJsonFile(json);
+        HttpContext.Session.SetString("currentDataSet", json);
         
         return RedirectToPage("/DeckGenerator");
     }

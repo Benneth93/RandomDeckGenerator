@@ -106,3 +106,10 @@ C:\Projects\RandomDeckGenerator\DeckGeneratorTests\obj\Debug\net7.0\refint\DeckG
 C:\Projects\RandomDeckGenerator\DeckGeneratorTests\obj\Debug\net7.0\DeckGeneratorTests.pdb
 C:\Projects\RandomDeckGenerator\DeckGeneratorTests\obj\Debug\net7.0\DeckGeneratorTests.genruntimeconfig.cache
 C:\Projects\RandomDeckGenerator\DeckGeneratorTests\obj\Debug\net7.0\ref\DeckGeneratorTests.dll
+C:\Projects\RandomDeckGenerator\DeckGeneratorTests\bin\Debug\net7.0\Azure.Core.dll
+C:\Projects\RandomDeckGenerator\DeckGeneratorTests\bin\Debug\net7.0\Azure.Storage.Common.dll
+C:\Projects\RandomDeckGenerator\DeckGeneratorTests\bin\Debug\net7.0\Azure.Storage.Files.Shares.dll
+C:\Projects\RandomDeckGenerator\DeckGeneratorTests\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Projects\RandomDeckGenerator\DeckGeneratorTests\bin\Debug\net7.0\System.IO.Hashing.dll
+C:\Projects\RandomDeckGenerator\DeckGeneratorTests\bin\Debug\net7.0\System.Memory.Data.dll
+C:\Projects\RandomDeckGenerator\DeckGeneratorTests\bin\Debug\net7.0\appsettings.Production.json

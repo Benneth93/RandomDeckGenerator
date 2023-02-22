@@ -1,4 +1,8 @@
+using RandomDeckGenerator.Services;
+
 var builder = WebApplication.CreateBuilder(args);
+
+AppSettingsService.AppSettingsConfigure(builder.Configuration);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
