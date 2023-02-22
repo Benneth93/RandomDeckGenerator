@@ -41,7 +41,7 @@ public class DeckInput : PageModel
         }
         
         var json = JsonConvert.SerializeObject(listOfInput);
-        AzureFileShareService.UploadJsonFile(json);
+        AzureFileShareService.UploadJsonFile(json, HttpContext.Session.GetString("Username"));
         HttpContext.Session.SetString("currentDataSet", json);
         
         return RedirectToPage("/DeckGenerator");

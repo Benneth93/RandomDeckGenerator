@@ -13,7 +13,8 @@ public class DeckGenerator : PageModel
     public IActionResult OnGet()
     {
             var contextdata = HttpContext.Session.GetString("currentDataSet");
-            
+
+            if (HttpContext.Session.GetInt32("isLoggedIn") == 0) return RedirectToPage("/Login");
             if (contextdata == null) return RedirectToPage("/DeckInput");
             
             var dataList = JsonConvert.DeserializeObject<List<string>>(contextdata);
@@ -21,12 +22,7 @@ public class DeckGenerator : PageModel
             _deck = DeckGeneratorService.GenerateDeck(dataList);
             HttpContext.Session.SetString("Deck",JsonConvert.SerializeObject(_deck));
             HttpContext.Session.SetInt32("DeckGenerated", 1);
-
-            foreach (var card in _deck._clubs) Console.WriteLine($"Club: {card}");
-            foreach (var card in _deck._spades) Console.WriteLine($"Spade: {card}");
-            foreach (var card in _deck._hearts) Console.WriteLine($"Heart: {card}");
-            foreach (var card in _deck._diamonds) Console.WriteLine($"Diamond: {card}");
-
+            
             return null;
 
     }
