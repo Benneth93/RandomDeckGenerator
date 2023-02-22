@@ -2,6 +2,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Newtonsoft.Json;
 using System.IO;
+using System.Net;
+using RandomDeckGenerator.Models;
 using RandomDeckGenerator.Services;
 
 namespace RandomDeckGenerator.Pages;
@@ -26,7 +28,7 @@ public class DeckInput : PageModel
     }
 
 
-    public IActionResult OnPost()
+    public async Task<IActionResult> OnPost()
     {
         var listOfInput = Request.Form["dataToInput"].ToList();
 
@@ -39,10 +41,15 @@ public class DeckInput : PageModel
             var current = rand.Next(0, listOfInput.Count);
             listOfInput.Add(listOfInput[current]);
         }
+
+        var user = await AzureFileShareService
+            .GetSaveFileIfExists(HttpContext.Session.GetString("Username"));
+
+        user.StoredList = listOfInput;
         
-        var json = JsonConvert.SerializeObject(listOfInput);
-        AzureFileShareService.UploadJsonFile(json, HttpContext.Session.GetString("Username"));
-        HttpContext.Session.SetString("currentDataSet", json);
+        var json = JsonConvert.SerializeObject(user);
+        AzureFileShareService.UploadJsonFile(json, user.Username);
+        HttpContext.Session.SetString("currentDataSet", JsonConvert.SerializeObject(user.StoredList));
         
         return RedirectToPage("/DeckGenerator");
     }

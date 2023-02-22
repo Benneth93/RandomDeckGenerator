@@ -1,6 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Newtonsoft.Json;
 using RandomDeckGenerator.Models;
 using RandomDeckGenerator.Services;
 
@@ -19,6 +20,7 @@ public class Login : PageModel
         public string Password { get; set; }
     }
 
+    [BindProperty]
     public LoginModel credentials { get; set; } = new();
 
     public void OnGet()
@@ -35,8 +37,8 @@ public class Login : PageModel
             if (user != null)
             {
                 HttpContext.Session.SetInt32("isLoggedIn", 1);
-                HttpContext.Session.SetString("username", user.Username);
-                
+                HttpContext.Session.SetString("Username", user.Username);
+                HttpContext.Session.SetString("currentDataSet", JsonConvert.SerializeObject(user.StoredList));
             }
             else ModelState.AddModelError("","Wrong username and password");
         }
