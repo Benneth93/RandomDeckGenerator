@@ -1,14 +1,10 @@
-C:\Projects\RandomDeckGenerator\DeckGeneratorTests\obj\Debug\net7.0\DeckGeneratorTests.csproj.AssemblyReference.cache
-C:\Projects\RandomDeckGenerator\DeckGeneratorTests\obj\Debug\net7.0\DeckGeneratorTests.GeneratedMSBuildEditorConfig.editorconfig
-C:\Projects\RandomDeckGenerator\DeckGeneratorTests\obj\Debug\net7.0\DeckGeneratorTests.AssemblyInfoInputs.cache
-C:\Projects\RandomDeckGenerator\DeckGeneratorTests\obj\Debug\net7.0\DeckGeneratorTests.AssemblyInfo.cs
-C:\Projects\RandomDeckGenerator\DeckGeneratorTests\obj\Debug\net7.0\DeckGeneratorTests.csproj.CoreCompileInputs.cache
 C:\Projects\RandomDeckGenerator\DeckGeneratorTests\bin\Debug\net7.0\CoverletSourceRootsMapping
 C:\Projects\RandomDeckGenerator\DeckGeneratorTests\bin\Debug\net7.0\testhost.dll
 C:\Projects\RandomDeckGenerator\DeckGeneratorTests\bin\Debug\net7.0\RandomDeckGenerator.deps.json
 C:\Projects\RandomDeckGenerator\DeckGeneratorTests\bin\Debug\net7.0\RandomDeckGenerator.runtimeconfig.json
 C:\Projects\RandomDeckGenerator\DeckGeneratorTests\bin\Debug\net7.0\appsettings.Development.json
 C:\Projects\RandomDeckGenerator\DeckGeneratorTests\bin\Debug\net7.0\appsettings.json
+C:\Projects\RandomDeckGenerator\DeckGeneratorTests\bin\Debug\net7.0\appsettings.Production.json
 C:\Projects\RandomDeckGenerator\DeckGeneratorTests\bin\Debug\net7.0\RandomDeckGenerator.staticwebassets.runtime.json
 C:\Projects\RandomDeckGenerator\DeckGeneratorTests\bin\Debug\net7.0\RandomDeckGenerator.exe
 C:\Projects\RandomDeckGenerator\DeckGeneratorTests\bin\Debug\net7.0\testhost.exe
@@ -22,6 +18,10 @@ C:\Projects\RandomDeckGenerator\DeckGeneratorTests\bin\Debug\net7.0\DeckGenerato
 C:\Projects\RandomDeckGenerator\DeckGeneratorTests\bin\Debug\net7.0\DeckGeneratorTests.runtimeconfig.json
 C:\Projects\RandomDeckGenerator\DeckGeneratorTests\bin\Debug\net7.0\DeckGeneratorTests.dll
 C:\Projects\RandomDeckGenerator\DeckGeneratorTests\bin\Debug\net7.0\DeckGeneratorTests.pdb
+C:\Projects\RandomDeckGenerator\DeckGeneratorTests\bin\Debug\net7.0\Azure.Core.dll
+C:\Projects\RandomDeckGenerator\DeckGeneratorTests\bin\Debug\net7.0\Azure.Storage.Common.dll
+C:\Projects\RandomDeckGenerator\DeckGeneratorTests\bin\Debug\net7.0\Azure.Storage.Files.Shares.dll
+C:\Projects\RandomDeckGenerator\DeckGeneratorTests\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Projects\RandomDeckGenerator\DeckGeneratorTests\bin\Debug\net7.0\Microsoft.VisualStudio.CodeCoverage.Shim.dll
 C:\Projects\RandomDeckGenerator\DeckGeneratorTests\bin\Debug\net7.0\Microsoft.TestPlatform.CoreUtilities.dll
 C:\Projects\RandomDeckGenerator\DeckGeneratorTests\bin\Debug\net7.0\Microsoft.TestPlatform.PlatformAbstractions.dll
@@ -33,6 +33,8 @@ C:\Projects\RandomDeckGenerator\DeckGeneratorTests\bin\Debug\net7.0\Microsoft.Vi
 C:\Projects\RandomDeckGenerator\DeckGeneratorTests\bin\Debug\net7.0\Newtonsoft.Json.dll
 C:\Projects\RandomDeckGenerator\DeckGeneratorTests\bin\Debug\net7.0\NuGet.Frameworks.dll
 C:\Projects\RandomDeckGenerator\DeckGeneratorTests\bin\Debug\net7.0\nunit.framework.dll
+C:\Projects\RandomDeckGenerator\DeckGeneratorTests\bin\Debug\net7.0\System.IO.Hashing.dll
+C:\Projects\RandomDeckGenerator\DeckGeneratorTests\bin\Debug\net7.0\System.Memory.Data.dll
 C:\Projects\RandomDeckGenerator\DeckGeneratorTests\bin\Debug\net7.0\cs\Microsoft.TestPlatform.CoreUtilities.resources.dll
 C:\Projects\RandomDeckGenerator\DeckGeneratorTests\bin\Debug\net7.0\cs\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
 C:\Projects\RandomDeckGenerator\DeckGeneratorTests\bin\Debug\net7.0\de\Microsoft.TestPlatform.CoreUtilities.resources.dll
@@ -100,6 +102,11 @@ C:\Projects\RandomDeckGenerator\DeckGeneratorTests\bin\Debug\net7.0\zh-Hant\Micr
 C:\Projects\RandomDeckGenerator\DeckGeneratorTests\bin\Debug\net7.0\zh-Hant\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
 C:\Projects\RandomDeckGenerator\DeckGeneratorTests\bin\Debug\net7.0\RandomDeckGenerator.dll
 C:\Projects\RandomDeckGenerator\DeckGeneratorTests\bin\Debug\net7.0\RandomDeckGenerator.pdb
+C:\Projects\RandomDeckGenerator\DeckGeneratorTests\obj\Debug\net7.0\DeckGeneratorTests.csproj.AssemblyReference.cache
+C:\Projects\RandomDeckGenerator\DeckGeneratorTests\obj\Debug\net7.0\DeckGeneratorTests.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\RandomDeckGenerator\DeckGeneratorTests\obj\Debug\net7.0\DeckGeneratorTests.AssemblyInfoInputs.cache
+C:\Projects\RandomDeckGenerator\DeckGeneratorTests\obj\Debug\net7.0\DeckGeneratorTests.AssemblyInfo.cs
+C:\Projects\RandomDeckGenerator\DeckGeneratorTests\obj\Debug\net7.0\DeckGeneratorTests.csproj.CoreCompileInputs.cache
 C:\Projects\RandomDeckGenerator\DeckGeneratorTests\obj\Debug\net7.0\DeckGeneratorTests.csproj.CopyComplete
 C:\Projects\RandomDeckGenerator\DeckGeneratorTests\obj\Debug\net7.0\DeckGeneratorTests.dll
 C:\Projects\RandomDeckGenerator\DeckGeneratorTests\obj\Debug\net7.0\refint\DeckGeneratorTests.dll

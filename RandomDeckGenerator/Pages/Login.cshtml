@@ -1,0 +1,20 @@
+@page
+@model RandomDeckGenerator.Pages.Login
+
+@{
+}
+
+<div>
+    @using (Html.BeginForm())
+    {
+        <label for="username">Username</label>
+        @Html.TextBoxFor(m => m.credentials.Username)
+        <label for="password">Password</label>
+        @Html.PasswordFor(m => m.credentials.Password)
+        <input type="Submit" class="button"/>
+        @Html.ValidationSummary(false);
+    }
+    
+    <a href="~/Register">Register new user</a>
+    
+</div>

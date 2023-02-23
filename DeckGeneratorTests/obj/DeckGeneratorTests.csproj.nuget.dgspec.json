@@ -121,6 +121,10 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "Azure.Storage.Files.Shares": {
+              "target": "Package",
+              "version": "[12.12.1, )"
+            },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.2, )"

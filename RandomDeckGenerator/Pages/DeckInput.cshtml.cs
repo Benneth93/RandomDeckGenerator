@@ -1,6 +1,10 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Newtonsoft.Json;
+using System.IO;
+using System.Net;
+using RandomDeckGenerator.Models;
+using RandomDeckGenerator.Services;
 
 namespace RandomDeckGenerator.Pages;
 
@@ -8,8 +12,9 @@ public class DeckInput : PageModel
 {
     public List<string> inputs = new();
 
-    public void OnGet()
+    public async Task<IActionResult> OnGet()
     {
+        if(HttpContext.Session.GetInt32("isLoggedIn") != 1) return RedirectToPage("/Login"); 
         var currentData = HttpContext.Session.GetString("currentDataSet");
 
         if (currentData == null)
@@ -21,10 +26,12 @@ public class DeckInput : PageModel
            var dataToList = JsonConvert.DeserializeObject<List<string>>(currentData);
            inputs = dataToList;
         }
+
+        return null;
     }
 
 
-    public IActionResult OnPost()
+    public async Task<IActionResult> OnPost()
     {
         var listOfInput = Request.Form["dataToInput"].ToList();
 
@@ -38,7 +45,14 @@ public class DeckInput : PageModel
             listOfInput.Add(listOfInput[current]);
         }
 
-        HttpContext.Session.SetString("currentDataSet", JsonConvert.SerializeObject(listOfInput));
+        var user = await AzureFileShareService
+            .GetSaveFileIfExists(HttpContext.Session.GetString("Username"));
+
+        user.StoredList = listOfInput;
+        
+        var json = JsonConvert.SerializeObject(user);
+        AzureFileShareService.UploadJsonFile(json, user.Username);
+        HttpContext.Session.SetString("currentDataSet", JsonConvert.SerializeObject(user.StoredList));
         
         return RedirectToPage("/DeckGenerator");
     }
