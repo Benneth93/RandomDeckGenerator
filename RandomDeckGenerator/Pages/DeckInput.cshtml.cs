@@ -12,8 +12,9 @@ public class DeckInput : PageModel
 {
     public List<string> inputs = new();
 
-    public void OnGet()
+    public async Task<IActionResult> OnGet()
     {
+        if(HttpContext.Session.GetInt32("isLoggedIn") != 1) return RedirectToPage("/Login"); 
         var currentData = HttpContext.Session.GetString("currentDataSet");
 
         if (currentData == null)
@@ -25,6 +26,8 @@ public class DeckInput : PageModel
            var dataToList = JsonConvert.DeserializeObject<List<string>>(currentData);
            inputs = dataToList;
         }
+
+        return null;
     }
 
 

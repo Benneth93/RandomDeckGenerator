@@ -14,7 +14,7 @@ public class DeckGenerator : PageModel
     {
             var contextdata = HttpContext.Session.GetString("currentDataSet");
 
-            if (HttpContext.Session.GetInt32("isLoggedIn") == 0) return RedirectToPage("/Login");
+            if (HttpContext.Session.GetInt32("isLoggedIn") != 1) return RedirectToPage("/Login");
             if (contextdata == null) return RedirectToPage("/DeckInput");
             
             var dataList = JsonConvert.DeserializeObject<List<string>>(contextdata);
