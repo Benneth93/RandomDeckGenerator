@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "fs3l2V1rNnxpu+IC4UiuuJXDsyygWkVwu9/mY1miQqlaXDIMkrcJzslcY3f1nUlLsw6ulqkNXZeCXkf52VBLxA==",
+  "dgSpecHash": "uGsW65C+MPg6tGuqJyV+N15K/+G4aVoEJUdHEXYs1/EtlPVMcW7Zz0Aa2vkj8YwbRziyd58T6MOGoyVjiIfhTw==",
   "success": true,
   "projectFilePath": "C:\\Projects\\RandomDeckGenerator\\DeckGeneratorTests\\DeckGeneratorTests.csproj",
   "expectedPackageFiles": [
