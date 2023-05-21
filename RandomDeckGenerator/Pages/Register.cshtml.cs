@@ -30,16 +30,17 @@ public class Register : PageModel
     {
         if (ModelState.IsValid)
         {
-            var user = await UserService.Register(credentials.Username, credentials.Password);
+            var userRegistrationResponse = await UserService.Register(credentials.Username, credentials.Password);
             
-            if (user != null)
+            if (userRegistrationResponse.isSuccess)
             {
                 HttpContext.Session.SetInt32("isLoggedIn", 1);
-                HttpContext.Session.SetString("Username", user.Username);
-                HttpContext.Session.SetString("currentDataSet", JsonConvert.SerializeObject(user.StoredList));
+                HttpContext.Session.SetString("Username", userRegistrationResponse.User.Username);
+                HttpContext.Session.SetString("currentDataSet", JsonConvert.SerializeObject(userRegistrationResponse.User.StoredList));
+                
                 return RedirectToPage("/DeckInput");
             }
-            else ModelState.AddModelError("","Registration Failed");
+            else ModelState.AddModelError("",userRegistrationResponse.Message);
         }
 
         return null;
