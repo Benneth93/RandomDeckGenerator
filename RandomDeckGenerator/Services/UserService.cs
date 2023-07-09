@@ -2,6 +2,7 @@ using RandomDeckGenerator.Models;
 using System.Security.Cryptography;
 using System.Text;
 using Microsoft.Extensions.Logging.Abstractions;
+using RandomDeckGenerator.StubServices;
 
 namespace RandomDeckGenerator.Services;
 
@@ -12,7 +13,12 @@ public static class UserService
         var hashedPassword = HashPassword(password);
         try
         {
-            var user = await AzureFileShareService.GetSaveFileIfExists(username);
+            User user = new();
+
+            user = !AppSettingsService._stubs.AzureFileServiceStub
+                ? await AzureFileShareService.GetSaveFileIfExists(username)
+                : await AzureFileServiceStub.GetSaveFileIfExists(username);
+
             return hashedPassword == user.Password ? user : null;
         }
         catch (Exception e)
@@ -27,7 +33,12 @@ public static class UserService
     {
         try
         {
-            var userCheck = await AzureFileShareService.GetSaveFileIfExists(username);
+            User userCheck = null;
+
+            userCheck = !AppSettingsService._stubs.AzureFileServiceStub
+                ? await AzureFileShareService.GetSaveFileIfExists(username)
+                : await AzureFileServiceStub.GetSaveFileIfExists(username);
+
             if (userCheck != null) return new UserRegistrationResponse()
             {
                 User = null,
@@ -49,9 +60,13 @@ public static class UserService
         
         
         
-        for(int i = 0; i<52;i++)user.StoredList.Add("");
+        for(var i = 0; i<52;i++)user.StoredList.Add("");
 
-        await AzureFileShareService.UploadNewUser(user);
+
+        if (!AppSettingsService._stubs.AzureFileServiceStub)
+            await AzureFileShareService.UploadNewUser(user);
+        else 
+            await AzureFileServiceStub.UploadNewUser(user);
         
         var userRegistrationResponse = new UserRegistrationResponse()
         {

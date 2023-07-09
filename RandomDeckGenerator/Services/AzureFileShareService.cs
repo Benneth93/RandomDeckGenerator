@@ -1,7 +1,5 @@
-using System.Runtime.InteropServices.Marshalling;
 using Azure;
 using Azure.Storage.Files.Shares;
-using Microsoft.AspNetCore.Identity;
 using Newtonsoft.Json;
 using RandomDeckGenerator.Models;
 
@@ -42,10 +40,8 @@ public static class AzureFileShareService
         await using (var stream = await file.OpenReadAsync().ConfigureAwait(false))
         using (var reader = new StreamReader(stream))
         {
-            while (!reader.EndOfStream)
-            {
-                data = await reader.ReadLineAsync().ConfigureAwait(false);
-            }
+            while (!reader.EndOfStream)data = await reader.ReadLineAsync().ConfigureAwait(false);
+            
         }
 
         var userInfo = JsonConvert.DeserializeObject<User>(data);
