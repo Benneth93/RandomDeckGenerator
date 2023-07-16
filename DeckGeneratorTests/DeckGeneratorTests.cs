@@ -25,10 +25,10 @@ public class DeckGeneratorTests
        var deck =  DeckGeneratorService.GenerateDeck(list);
        Assert.Multiple(() =>
        {
-           Assert.That(deck._clubs.Count, Is.EqualTo(13));
-           Assert.That(deck._spades.Count, Is.EqualTo(13));
-           Assert.That(deck._diamonds.Count, Is.EqualTo(13));
-           Assert.That(deck._hearts.Count, Is.EqualTo(13));
+           Assert.That(deck._clubs, Has.Count.EqualTo(13));
+           Assert.That(deck._spades, Has.Count.EqualTo(13));
+           Assert.That(deck._diamonds, Has.Count.EqualTo(13));
+           Assert.That(deck._hearts, Has.Count.EqualTo(13));
        });
        
        
