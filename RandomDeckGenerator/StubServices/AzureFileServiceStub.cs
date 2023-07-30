@@ -20,7 +20,7 @@ public static class AzureFileServiceStub
         await outputFile.WriteAsync(json);
     }
 
-    public static async Task<User> GetSaveFileIfExists(string userName)
+    public static async Task<User?> GetSaveFileIfExists(string userName)
     {
         var fileName = $"{userName}.json";
         var data = "";

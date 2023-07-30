@@ -46,7 +46,7 @@ public class DeckInput : PageModel
             listOfInput.Add(listOfInput[current]);
         }
 
-        User user;
+        User? user;
         if (!AppSettingsService._stubs.AzureFileServiceStub)
         {
             user = await AzureFileShareService

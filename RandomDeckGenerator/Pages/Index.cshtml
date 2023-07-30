@@ -2,6 +2,7 @@
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
+    var AzureStub = Model.AzureStub;
 }
 <link rel="stylesheet" href="~/css/HomePageStylesheet.css" asp-append-version="true"/>
 
@@ -10,4 +11,9 @@
     <p class="Explainer">This program will allow you to create lists, and randomly generate sets 
         based on a 52 card deck, the generator will assign a random value from your lists to each
         card in the deck and display them on screen, please proceed to the DeckGenerator page to start</p>
+    
+    @if (AzureStub)
+    {
+        <h1>Azure File Service Stub is enabled</h1>
+    }
 </div>

@@ -13,13 +13,13 @@ public static class UserService
         var hashedPassword = HashPassword(password);
         try
         {
-            User user = new();
+            User? user = new();
 
             user = !AppSettingsService._stubs.AzureFileServiceStub
                 ? await AzureFileShareService.GetSaveFileIfExists(username)
                 : await AzureFileServiceStub.GetSaveFileIfExists(username);
 
-            return hashedPassword == user.Password ? user : null;
+            return (hashedPassword == user?.Password ? user : null) ?? throw new InvalidOperationException();
         }
         catch (Exception e)
         {
@@ -33,7 +33,7 @@ public static class UserService
     {
         try
         {
-            User userCheck = null;
+            User? userCheck = null;
 
             userCheck = !AppSettingsService._stubs.AzureFileServiceStub
                 ? await AzureFileShareService.GetSaveFileIfExists(username)
