@@ -11,7 +11,11 @@
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=be87c64d_002Ddeae_002D4643_002Daa73_002D38907f696def/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="GenerateDeckOfCards" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;NUnit3x::C31D4218-982B-429F-8649-DF781F15D6F6::net7.0::DeckGeneratorTests.DeckGeneratorTests.GenerateDeckOfCards&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::C31D4218-982B-429F-8649-DF781F15D6F6::net7.0::DeckGeneratorTests.UserTests.UserRegistration.RegistrationShouldCreateANewUser&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=f5dc502f_002D6464_002D4e5a_002Da6d5_002D5b0259f94bb5/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Session #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Nothing /&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	
 	</wpf:ResourceDictionary>

@@ -39,6 +39,7 @@ public class Login : PageModel
                 HttpContext.Session.SetInt32("isLoggedIn", 1);
                 HttpContext.Session.SetString("Username", user.Username);
                 HttpContext.Session.SetString("currentDataSet", JsonConvert.SerializeObject(user.StoredList));
+                HttpContext.Session.SetString("userLists", JsonConvert.SerializeObject(user.UserStoredLists));
                 return RedirectToPage("/DeckInput");
             }
             else ModelState.AddModelError("","Wrong username and password");

@@ -2,8 +2,26 @@
 @model RandomDeckGenerator.Pages.CustomizeLists
 
 @{
+    var lists = ViewData.Model.userLists;
 }
 
 <div>
     <h1>Customize Lists Page!!</h1>
+    
+    @foreach (var list in lists)
+    {
+        <table>
+            <thead>
+                <th>@list.Name</th>
+            </thead>
+            <tbody>
+                @foreach (var item in list.List)
+                {
+                    <tr>
+                        <td>@item</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
 </div>

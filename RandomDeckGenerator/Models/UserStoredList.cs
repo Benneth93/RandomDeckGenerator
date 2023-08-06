@@ -4,4 +4,9 @@ public class UserStoredList
 {
     public string Name { get; set; }
     public List<string> List { get; set; }
+
+    public UserStoredList()
+    {
+        this.List = new();
+    }
 }

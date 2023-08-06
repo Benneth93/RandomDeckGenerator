@@ -55,7 +55,20 @@ public static class UserService
         {
             Username = username,
             Password = HashPassword(password),
-            StoredList = new()
+            StoredList = new(),
+            UserStoredLists = new()
+            {
+                new UserStoredList()
+                {
+                    Name = "Test 1",
+                    List = {"A","B","C","D"}
+                },
+                new UserStoredList()
+                {
+                    Name = "Test 2",
+                    List = {"1","2", "3","4", "5"}
+                }
+            }
         };
         
         
@@ -81,7 +94,7 @@ public static class UserService
     private static string HashPassword(string password)
     {
         var input = Encoding.UTF8.GetBytes(password);
-        var hashBytes = MD5.Create().ComputeHash(input);
+        var hashBytes = MD5.HashData(input);
 
         return Convert.ToHexString(hashBytes);
     }
