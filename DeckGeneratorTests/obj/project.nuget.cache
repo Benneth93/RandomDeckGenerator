@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vK1XvB48/wa32uu6/7VvYqlLha6j4XJ/y4IKE1uZGBX9Ud2GJGiVhFSmhD0nmMzZLzmX+dAp64crsVWZs1LUPA==",
+  "dgSpecHash": "6tnfUxO+6m0L53kCKdqNLHDZdZ1Y2NgYUmvKJMYttZ9AXICMSoy97sb7hyc++lcur9ogkYw5EHQMeZDPKKuklg==",
   "success": true,
-  "projectFilePath": "C:\\Projects\\RandomDeckGenerator\\DeckGeneratorTests\\DeckGeneratorTests.csproj",
+  "projectFilePath": "C:\\Users\\murph\\Projects\\RandomDeckGenerator\\DeckGeneratorTests\\DeckGeneratorTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\murph\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\murph\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
@@ -31,5 +31,12 @@
     "C:\\Users\\murph\\.nuget\\packages\\system.text.json\\4.7.2\\system.text.json.4.7.2.nupkg.sha512",
     "C:\\Users\\murph\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\murph\\Projects\\RandomDeckGenerator\\DeckGeneratorTests\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

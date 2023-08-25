@@ -20,8 +20,5 @@
       <ProjectReference Include="..\RandomDeckGenerator\RandomDeckGenerator.csproj" />
     </ItemGroup>
 
-    <ItemGroup>
-      <Folder Include="UserTests\" />
-    </ItemGroup>
 
 </Project>

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projects\\RandomDeckGenerator\\DeckGeneratorTests\\DeckGeneratorTests.csproj": {}
+    "C:\\Users\\murph\\Projects\\RandomDeckGenerator\\DeckGeneratorTests\\DeckGeneratorTests.csproj": {}
   },
   "projects": {
-    "C:\\Projects\\RandomDeckGenerator\\DeckGeneratorTests\\DeckGeneratorTests.csproj": {
+    "C:\\Users\\murph\\Projects\\RandomDeckGenerator\\DeckGeneratorTests\\DeckGeneratorTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projects\\RandomDeckGenerator\\DeckGeneratorTests\\DeckGeneratorTests.csproj",
+        "projectUniqueName": "C:\\Users\\murph\\Projects\\RandomDeckGenerator\\DeckGeneratorTests\\DeckGeneratorTests.csproj",
         "projectName": "DeckGeneratorTests",
-        "projectPath": "C:\\Projects\\RandomDeckGenerator\\DeckGeneratorTests\\DeckGeneratorTests.csproj",
+        "projectPath": "C:\\Users\\murph\\Projects\\RandomDeckGenerator\\DeckGeneratorTests\\DeckGeneratorTests.csproj",
         "packagesPath": "C:\\Users\\murph\\.nuget\\packages\\",
-        "outputPath": "C:\\Projects\\RandomDeckGenerator\\DeckGeneratorTests\\obj\\",
+        "outputPath": "C:\\Users\\murph\\Projects\\RandomDeckGenerator\\DeckGeneratorTests\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\murph\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Projects\\RandomDeckGenerator\\RandomDeckGenerator\\RandomDeckGenerator.csproj": {
-                "projectPath": "C:\\Projects\\RandomDeckGenerator\\RandomDeckGenerator\\RandomDeckGenerator.csproj"
+              "C:\\Users\\murph\\Projects\\RandomDeckGenerator\\RandomDeckGenerator\\RandomDeckGenerator.csproj": {
+                "projectPath": "C:\\Users\\murph\\Projects\\RandomDeckGenerator\\RandomDeckGenerator\\RandomDeckGenerator.csproj"
               }
             }
           }
@@ -81,18 +81,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Projects\\RandomDeckGenerator\\RandomDeckGenerator\\RandomDeckGenerator.csproj": {
+    "C:\\Users\\murph\\Projects\\RandomDeckGenerator\\RandomDeckGenerator\\RandomDeckGenerator.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projects\\RandomDeckGenerator\\RandomDeckGenerator\\RandomDeckGenerator.csproj",
+        "projectUniqueName": "C:\\Users\\murph\\Projects\\RandomDeckGenerator\\RandomDeckGenerator\\RandomDeckGenerator.csproj",
         "projectName": "RandomDeckGenerator",
-        "projectPath": "C:\\Projects\\RandomDeckGenerator\\RandomDeckGenerator\\RandomDeckGenerator.csproj",
+        "projectPath": "C:\\Users\\murph\\Projects\\RandomDeckGenerator\\RandomDeckGenerator\\RandomDeckGenerator.csproj",
         "packagesPath": "C:\\Users\\murph\\.nuget\\packages\\",
-        "outputPath": "C:\\Projects\\RandomDeckGenerator\\RandomDeckGenerator\\obj\\",
+        "outputPath": "C:\\Users\\murph\\Projects\\RandomDeckGenerator\\RandomDeckGenerator\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\murph\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -153,7 +153,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
