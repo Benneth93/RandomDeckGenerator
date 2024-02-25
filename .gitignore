@@ -1,1 +1,6 @@
 /ConnectionStrings.json
+*/bin
+*/obj
+**/bin/
+**/obj/
+RandomDeckGenerator.csproj.user
