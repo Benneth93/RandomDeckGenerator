@@ -5,6 +5,7 @@ using System.IO;
 using System.Net;
 using RandomDeckGenerator.Models;
 using RandomDeckGenerator.Services;
+using RandomDeckGenerator.StubServices;
 
 namespace RandomDeckGenerator.Pages;
 
@@ -45,13 +46,30 @@ public class DeckInput : PageModel
             listOfInput.Add(listOfInput[current]);
         }
 
-        var user = await AzureFileShareService
-            .GetSaveFileIfExists(HttpContext.Session.GetString("Username"));
+        User? user;
+        if (!AppSettingsService._stubs.AzureFileServiceStub)
+        {
+            user = await AzureFileShareService
+                .GetSaveFileIfExists(HttpContext.Session.GetString("Username"));
+        }
+        else
+        {
+            user = await AzureFileServiceStub.GetSaveFileIfExists(HttpContext.Session.GetString("Username"));
+        }
 
         user.StoredList = listOfInput;
         
         var json = JsonConvert.SerializeObject(user);
-        AzureFileShareService.UploadJsonFile(json, user.Username);
+
+        if (!AppSettingsService._stubs.AzureFileServiceStub)
+        {
+            AzureFileShareService.UploadJsonFile(json, user.Username);
+        }
+        else
+        {
+            AzureFileServiceStub.UploadJsonFile(json, user.Username);
+        }
+
         HttpContext.Session.SetString("currentDataSet", JsonConvert.SerializeObject(user.StoredList));
         
         return RedirectToPage("/DeckGenerator");
